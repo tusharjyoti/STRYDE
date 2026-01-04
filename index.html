@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stryde Run Club - Shillong</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="logo.jpg" alt="Stryde Logo">
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#membership">Membership</a></li>
+                <li><a href="#leaderboard">Leaderboard</a></li>
+                <li><a href="#register" class="nav-btn">Register</a></li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#membership">Membership</a>
+        <a href="#leaderboard">Leaderboard</a>
+        <a href="#register">Register</a>
+    </div>
+
+    <section id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content fade-up">
+                <h1 class="hero-title">STRYDE <br><span class="neon-text">RUN CLUB</span></h1>
+                <p class="hero-tagline">Community. Lifestyle. Movement. <br> Shillong's energetic running family.</p>
+                <div class="cta-group">
+                    <a href="#register" class="btn btn-primary">Join the Next Run</a>
+                    <a href="#membership" class="btn btn-secondary">View Plans</a>
+                </div>
+            </div>
+            <div class="hero-visual fade-up delay-1">
+                <div class="video-frame">
+                    <video autoplay loop muted playsinline poster="STRYDE/img3.jpg">
+                        <source src="STRYDE/vid.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container about-grid">
+            <div class="about-text reveal">
+                <h2 class="section-title">Who We Are</h2>
+                <p>
+                    Stryde Run Club, Shillong is an active running community that organises weekend runs and fitness events in various locations across Shillong. We usually meet early on weekend mornings to catch the sunrise and the sweat.
+                </p>
+                <p>
+                    Exact warm-up and flag-off times (around 6:00 AM and 6:30 AM) and registration links are announced on our Instagram. Stryde is known for its welcoming, inclusive atmosphere where beginners and experienced runners can connect, move, and grow together.
+                </p>
+                
+                <div class="locations-box">
+                    <h3>Where We Run</h3>
+                    <ul>
+                        <li>📍 Wards Lake</li>
+                        <li>📍 Golf Course Road (Outside Green Cafe)</li>
+                        <li>📍 Zostel, Shyiap</li>
+                        <li>📍 SBI Shillong Branch</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="about-gallery reveal delay-1">
+                <div class="gallery-wrapper">
+                    <img id="gallery-img" src="STRYDE/img3.jpg" alt="Stryde Community">
+                    <div class="gallery-controls">
+                        <button id="prev-btn">&#10094;</button>
+                        <button id="next-btn">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="membership" class="membership">
+        <div class="container">
+            <h2 class="section-title center-text reveal">Membership Plans</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card reveal" data-plan="monthly">
+                    <div class="badge">Best Value</div>
+                    <h3>Monthly Membership</h3>
+                    <div class="price">₹399 <span>/ month</span></div>
+                    <ul>
+                        <li>✅ Includes 4 Free Runs</li>
+                        <li>✅ Priority Event Access</li>
+                        <li>✅ Community Badges</li>
+                        <li>✅ Post-run hydration</li>
+                    </ul>
+                    <button class="btn btn-outline select-plan-btn" data-value="monthly">Choose Monthly</button>
+                </div>
+
+                <div class="pricing-card reveal delay-1" data-plan="per-run">
+                    <h3>Per-Run Pass</h3>
+                    <div class="price">₹99 <span>/ run</span></div>
+                    <ul>
+                        <li>✅ Flexible Schedule</li>
+                        <li>✅ Join any weekend run</li>
+                        <li>✅ Pay as you go</li>
+                        <li>✅ Post-run hydration</li>
+                    </ul>
+                    <button class="btn btn-outline select-plan-btn" data-value="per-run">Choose Flexi</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leaderboard" class="leaderboard">
+        <div class="container">
+            <h2 class="section-title center-text reveal">Weekly Leaderboard</h2>
+            <p class="subtitle center-text reveal">Date: 26.10.2025</p>
+
+            <div class="tabs reveal">
+                <button class="tab-btn active" data-target="men">Men's Category</button>
+                <button class="tab-btn" data-target="women">Women's Category</button>
+            </div>
+
+            <div class="table-container reveal delay-1">
+                <table id="leaderboard-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Name</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboard-body">
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="register" class="register">
+        <div class="container">
+            
+            <div class="next-run-info reveal">
+                <h3>📅 Next Run Details</h3>
+                <p id="dynamic-run-info">Loading run details...</p>
+            </div>
+
+            <div class="form-wrapper reveal delay-1">
+                <h2 class="section-title">Register Now</h2>
+                <form id="reg-form">
+                    <div class="form-group">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname" required placeholder="e.g. John Doe">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required placeholder="98765xxxxx">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="age">Age</label>
+                            <input type="number" id="age" required placeholder="25">
+                        </div>
+                        <div class="form-group">
+                            <label for="distance">Preferred Distance</label>
+                            <select id="distance">
+                                <option value="5K">5K</option>
+                                <option value="7K">7K</option>
+                                <option value="10K">10K</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group highlight-input">
+                        <label for="plan">Select Plan</label>
+                        <select id="plan">
+                            <option value="per-run">Per-Run Pass (₹99)</option>
+                            <option value="monthly">Monthly Membership (₹399)</option>
+                        </select>
+                        <small id="plan-summary">You are paying ₹99 for a single run.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emergency">Emergency Contact (Name & No.)</label>
+                        <input type="text" id="emergency" required placeholder="Mom - 98765...">
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the terms & community guidelines.</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary full-width">Confirm Registration</button>
+                </form>
+
+                <div id="success-message" class="success-card hidden">
+                    <div class="icon-check">✓</div>
+                    <h3>You're In!</h3>
+                    <p>See you at the next Stryde run 🌄</p>
+                    <button id="close-success" class="btn btn-outline">Close</button>
+                </div>
+            </div>
+
+            <div class="recent-regs reveal">
+                <h4>Recent Registrations</h4>
+                <ul id="recent-list">
+                    </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-left">
+                <h3>STRYDE.</h3>
+                <p>Run timings & locations are announced weekly on our social media.</p>
+            </div>
+            <div class="footer-right">
+                <a href="#" class="social-link">Instagram ↗</a>
+                <a href="#" class="social-link">Website ↗</a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Stryde Run Club Shillong. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
